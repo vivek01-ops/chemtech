@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: deepchem
+Version: 2.5.0
+Summary: Deep learning models for drug discovery,         quantum chemistry, and the life sciences.
+Home-page: https://github.com/deepchem/deepchem
+Maintainer: DeepChem contributors
+License: MIT
+Project-URL: Documentation, https://deepchem.readthedocs.io/en/latest/
+Project-URL: Source, https://github.com/deepchem/deepchem
+Keywords: deepchem,chemistry,biology,materials-science,life-science,drug-discovery
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.5
+Requires-Dist: joblib
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scikit-learn
+Requires-Dist: scipy
+
+UNKNOWN
+
+

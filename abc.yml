@@ -1,0 +1,372 @@
+'Hydrogen (H)',
+'Helium (He)',
+'Lithium (Li)',
+'Beryllium (Be)',
+'Boron (B)',
+'Carbon (C)',
+'Nitrogen (N)',
+'Oxygen (O)',
+'Fluorine (F)',
+'Neon (Ne)',
+'Sodium (Na)',
+'Magnesium (Mg)',
+'Aluminum (Al)',
+'Silicon (Si)',
+'Phosphorus (P)',
+'Sulfur (S)',
+'Chlorine (Cl)',
+'Argon (Ar)',
+'Potassium (K)',
+'Calcium (Ca)',
+'Scandium (Sc)',
+'Titanium (Ti)',
+'Vanadium (V)',
+'Chromium (Cr)',
+'Manganese (Mn)',
+'Iron (Fe)',
+'Cobalt (Co)',
+'Nickel (Ni)',
+'Copper (Cu)',
+'Zinc (Zn)',
+'Gallium (Ga)',
+'Germanium (Ge)',
+'Arsenic (As)',
+'Selenium (Se)',
+'Bromine (Br)',
+'Krypton (Kr)',
+'Rubidium (Rb)',
+'Strontium (Sr)',
+'Yttrium (Y)',
+'Zirconium (Zr)',
+'Niobium (Nb)',
+'Molybdenum (Mo)',
+'Technetium (Tc)',
+'Ruthenium (Ru)',
+'Rhodium (Rh)',
+'Palladium (Pd)',
+'Silver (Ag)',
+'Cadmium (Cd)',
+'Indium (In)',
+'Tin (Sn)',
+'Antimony (Sb)',
+'Tellurium (Te)',
+'Iodine (I)',
+'Xenon (Xe)',
+'Cesium (Cs)',
+'Barium (Ba)',
+'Lanthanum (La)',
+'Cerium (Ce)',
+'Praseodymium (Pr)',
+'Neodymium (Nd)',
+'Promethium (Pm)',
+'Samarium (Sm)',
+'Europium (Eu)',
+'Gadolinium (Gd)',
+'Terbium (Tb)',
+'Dysprosium (Dy)',
+'Holmium (Ho)',
+'Erbium (Er)',
+'Thulium (Tm)',
+'Ytterbium (Yb)',
+'Lutetium (Lu)',
+'Hafnium (Hf)',
+'Tantalum (Ta)',
+'Tungsten (W)',
+'Rhenium (Re)',
+'Osmium (Os)',
+'Iridium (Ir)',
+'Platinum (Pt)',
+'Gold (Au)',
+'Mercury (Hg)',
+'Thallium (Tl)',
+'Lead (Pb)',
+'Bismuth (Bi)',
+'Polonium (Po)',
+'Astatine (At)',
+'Radon (Rn)',
+'Francium (Fr)',
+'Radium (Ra)',
+'Actinium (Ac)',
+'Thorium (Th)',
+'Protactinium (Pa)',
+'Uranium (U)',
+'Neptunium (Np)',
+'Plutonium (Pu)',
+'Americium (Am)',
+'Curium (Cm)',
+'Berkelium (Bk)',
+'Californium (Cf)',
+'Einsteinium (Es)',
+'Fermium (Fm)',
+'Mendelevium (Md)',
+'Nobelium (No)',
+'Lawrencium (Lr)',
+'Rutherfordium (Rf)',
+'Dubnium (Db)',
+'Seaborgium (Sg)',
+'Bohrium (Bh)',
+'Hassium (Hs)',
+'Meitnerium (Mt)',
+'Darmstadtium (Ds)',
+'Roentgenium (Rg)',
+'Copernicium (Cn)',
+'Nihonium (Nh)',
+'Flerovium (Fl)',
+'Moscovium (Mc)',
+'Livermorium (Lv)',
+'Tennessine (Ts)',
+'Oganesson (O',
+
+
+
+
+
+
+catalyst = st.selectbox(
+    'Select Catalyst (Optional)',
+    ['Platinum (Pt)', 'Iron (Fe)', 'Zinc (Zn)'],
+    # placeholder="Select catalyst",
+    help="Choose the catalyst that will catalyse the reaction." 
+    index=None, 
+)
+st.write("You selected:", catalyst)
+
+
+
+
+
+
+
+Element,Symbol,Group,Acidity,State,Atomic Number,Atomic Weight,Valency,Octet
+
+Hydrogen,H,s,acid,gas,1,1.008,1,1
+Helium,He,s,neutral,gas,2,4.0026,0,2
+Lithium,Li,s,base,solid,3,6.94,1,2
+Beryllium,Be,s,base,solid,4,9.0122,2,2
+Boron,B,p,neutral,solid,5,10.81,3,6
+Carbon,C,p,neutral,solid,6,12.011,4,8
+Nitrogen,N,p,acid,gas,7,14.007,3,5
+Oxygen,O,p,acid,gas,8,15.999,2,6
+Fluorine,F,p,acid,gas,9,18.998,1,7
+Neon,Ne,p,neutral,gas,10,20.180,0,8
+Sodium,Na,s,base,solid,11,22.990,1,2
+Magnesium,Mg,s,base,solid,12,24.305,2,2
+Aluminum,Al,p,neutral,solid,13,26.982,3,6
+Silicon,Si,p,neutral,solid,14,28.085,4,8
+Phosphorus,P,p,acid,solid,15,30.974,3,5
+Sulfur,S,p,acid,solid,16,32.06,2,6
+Chlorine,Cl,p,acid,gas,17,35.45,1,7
+Argon,Ar,p,neutral,gas,18,39.948,0,8
+Potassium,K,s,base,solid,19,39.098,1,2
+Calcium,Ca,s,base,solid,20,40.078,2,2
+Scandium,Sc,d,neutral,solid,21,44.956,3,2
+Titanium,Ti,d,neutral,solid,22,47.867,4,2
+Vanadium,V,d,neutral,solid,23,50.942,5,2
+Chromium,Cr,d,neutral,solid,24,51.996,6,2
+Manganese,Mn,d,neutral,solid,25,54.938,7,2
+Iron,Fe,d,neutral,solid,26,55.845,2,2
+Cobalt,Co,d,neutral,solid,27,58.933,3,2
+Nickel,Ni,d,neutral,solid,28,58.933,2,2
+Copper,Cu,d,neutral,solid,29,63.546,1,2
+Zinc,Zn,d,neutral,solid,30,65.38,2,2
+Gallium,Ga,p,neutral,solid,31,69.723,3,6
+Germanium,Ge,p,neutral,solid,32,72.63,4,8
+Arsenic,As,p,neutral,solid,33,74.922,3,5
+Selenium,Se,p,acid,solid,34,78.971,2,6
+Bromine,Br,p,acid,liquid,35,79.904,1,7
+Krypton,Kr,p,neutral,gas,36,83.798,0,8
+Rubidium,Rb,s,base,solid,37,85.468,1,2
+Strontium,Sr,s,base,solid,38,87.62,2,2
+Yttrium,Y,d,neutral,solid,39,88.906,3,2
+Zirconium,Zr,d,neutral,solid,40,91.224,4,2
+Niobium,Nb,d,neutral,solid,41,92.906,5,2
+Molybdenum,Mo,d,neutral,solid,42,95.95,6,2
+Technetium,Tc,d,neutral,solid,43,98,7,2
+Ruthenium,Ru,d,neutral,solid,44,101.07,3,2
+Rhodium,Rh,d,neutral,solid,45,102.91,3,2
+Palladium,Pd,d,neutral,solid,46,106.42,2,2
+Silver,Ag,d,neutral,solid,47,107.87,1,2
+Cadmium,Cd,d,neutral,solid,48,112.41,2,2
+Indium,In,p,neutral,solid,49,114.82,3,6
+Tin,Sn,p,neutral,solid,50,118.71,4,8
+Antimony,Sb,p,neutral,solid,51,121.76,3,5
+Tellurium,Te,p,neutral,solid,52,127.60,2,6
+Iodine,I,p,acid,solid,53,126.90,1,7
+Xenon,Xe,p,neutral,gas,54,131.29,0,8
+Cesium,Cs,s,base,solid,55,132.91,1,2
+Barium,Ba,s,base,solid,56,137.33,2,2
+Lanthanum,La,f,neutral,solid,57,138.91,3,2
+Cerium,Ce,f,neutral,solid,58,140.12,4,2
+Praseodymium,Pr,f,neutral,solid,59,140.91,4,2
+Neodymium,Nd,f,neutral,solid,60,144.24,3,2
+Promethium,Pm,f,neutral,solid,61,145,3,2
+Samarium,Sm,f,neutral,solid,62,150.36,2,2
+Europium,Eu,f,neutral,solid,63,151.96,2,2
+Gadolinium,Gd,f,neutral,solid,64,157.25,3,2
+Terbium,Tb,f,neutral,solid,65,158.93,3,2
+Dysprosium,Dy,f,neutral,solid,66,162.50,3,2
+Holmium,Ho,f,neutral,solid,67,164.93,3,2
+Erbium,Er,f,neutral,solid,68,167.26,3,2
+Thulium,Tm,f,neutral,solid,69,168.93,3,2
+Ytterbium,Yb,f,neutral,solid,70,173.04,2,2
+Lutetium,Lu,f,neutral,solid,71,174.97,3,2
+Hafnium,Hf,d,neutral,solid,72,178.49,4,2
+Tantalum,Ta,d,neutral,solid,73,180.95,5,2
+Tungsten,W,d,neutral,solid,74,183.84,6,2
+Rhenium,Re,d,neutral,solid,75,186.21,7,2
+Osmium,Os,d,neutral,solid,76,190.23,4,2
+Iridium,Ir,d,neutral,solid,77,192.22,3,2
+Platinum,Pt,d,neutral,solid,78,195.08,2,2
+Gold,Au,d,neutral,solid,79,196.97,1,2
+Mercury,Hg,d,neutral,liquid,80,200.59,2,2
+Thallium,Tl,p,neutral,solid,81,204.38,3,6
+Lead,Pb,p,neutral,solid,82,207.2,4,6
+Bismuth,Bi,p,neutral,solid,83,208.98,3,5
+Polonium,Po,p,neutral,solid,84,209,2,6
+Astatine,At,p,neutral,solid,85,210,1,7
+Radon,Rn,p,neutral,gas,86,222,0,8
+Francium,Fr,s,base,solid,87,223,1,2
+Radium,Ra,s,base,solid,88,226,2,2
+Actinium,Ac,f,neutral,solid,89,227,3,2
+Thorium,Th,f,neutral,solid,90,232.04,4,2
+Protactinium,Pa,f,neutral,solid,91,231.04,5,2
+Uranium,U,f,neutral,solid,92,238.03,6,2
+Neptunium,Np,f,neutral,solid,93,237,7,2
+Plutonium,Pu,f,neutral,solid,94,244,6,2
+Americium,Am,f,neutral,solid,95,243,5,2
+Curium,Cm,f,neutral,solid,96,247,6,2
+Berkelium,Bk,f,neutral,solid,97,247,3,2
+Californium,Cf,f,neutral,solid,98,251,3,2
+Einsteinium,Es,f,neutral,solid,99,252,3,2
+
+
+
+
+
+
+
+from cgitb import text
+import streamlit as st
+import os
+import google.generativeai as genai
+
+# genai.configure(api_key=os.environ["AIzaSyB5gcQUMN_MqpOqvtPkHJ0vSM5I9vMC7VQ"])
+
+# Set up your Google Cloud credentials
+# os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "path_to_your_service_account_key.json"
+
+
+st.set_page_config(page_title="Reaction Simulator", page_icon="🧪", layout="centered", initial_sidebar_state="collapsed")
+# Initialize Google genai API
+genai.configure(api_key="AIzaSyB5gcQUMN_MqpOqvtPkHJ0vSM5I9vMC7VQ")
+
+
+# Title and Introduction
+st.title("Chemical Reaction Simulator")
+st.write("Simulate chemical reactions by selecting reactants, catalysts, and conditions.")
+# st.layout("centered") 
+
+# Reactant Selection
+reactants = st.multiselect(
+    'Select Reactants',
+    [
+        'Hydrogen (H)', 'Helium (He)', 'Lithium (Li)', 'Beryllium (Be)', 'Boron (B)', 'Carbon (C)',
+        'Nitrogen (N)', 'Oxygen (O)', 'Fluor    ine (F)', 'Neon (Ne)', 'Sodium (Na)', 'Magnesium (Mg)',
+        'Aluminum (Al)', 'Silicon (Si)', 'Phosphorus (P)', 'Sulfur (S)', 'Chlorine (Cl)', 'Argon (Ar)',
+        'Potassium (K)', 'Calcium (Ca)', 'Scandium (Sc)', 'Titanium (Ti)', 'Vanadium (V)', 'Chromium (Cr)',
+        'Manganese (Mn)', 'Iron (Fe)', 'Cobalt (Co)', 'Nickel (Ni)', 'Copper (Cu)', 'Zinc (Zn)',
+        'Gallium (Ga)', 'Germanium (Ge)', 'Arsenic (As)', 'Selenium (Se)', 'Bromine (Br)', 'Krypton (Kr)',
+        'Rubidium (Rb)', 'Strontium (Sr)', 'Yttrium (Y)', 'Zirconium (Zr)', 'Niobium (Nb)', 'Molybdenum (Mo)',
+        'Technetium (Tc)', 'Ruthenium (Ru)', 'Rhodium (Rh)', 'Palladium (Pd)', 'Silver (Ag)', 'Cadmium (Cd)',
+        'Indium (In)', 'Tin (Sn)', 'Antimony (Sb)', 'Tellurium (Te)', 'Iodine (I)', 'Xenon (Xe)',
+        'Cesium (Cs)', 'Barium (Ba)', 'Lanthanum (La)', 'Cerium (Ce)', 'Praseodymium (Pr)', 'Neodymium (Nd)',
+        'Promethium (Pm)', 'Samarium (Sm)', 'Europium (Eu)', 'Gadolinium (Gd)', 'Terbium (Tb)', 'Dysprosium (Dy)',
+        'Holmium (Ho)', 'Erbium (Er)', 'Thulium (Tm)', 'Ytterbium (Yb)', 'Lutetium (Lu)', 'Hafnium (Hf)',
+        'Tantalum (Ta)', 'Tungsten (W)', 'Rhenium (Re)', 'Osmium (Os)', 'Iridium (Ir)', 'Platinum (Pt)',
+        'Gold (Au)', 'Mercury (Hg)', 'Thallium (Tl)', 'Lead (Pb)', 'Bismuth (Bi)', 'Polonium (Po)',
+        'Astatine (At)', 'Radon (Rn)', 'Francium (Fr)', 'Radium (Ra)', 'Actinium (Ac)', 'Thorium (Th)',
+        'Protactinium (Pa)', 'Uranium (U)', 'Neptunium (Np)', 'Plutonium (Pu)', 'Americium (Am)', 'Curium (Cm)',
+        'Berkelium (Bk)', 'Californium (Cf)', 'Einsteinium (Es)', 'Fermium (Fm)', 'Mendelevium (Md)',
+        'Nobelium (No)', 'Lawrencium (Lr)', 'Rutherfordium (Rf)', 'Dubnium (Db)', 'Seaborgium (Sg)',
+        'Bohrium (Bh)', 'Hassium (Hs)', 'Meitnerium (Mt)', 'Darmstadtium (Ds)', 'Roentgenium (Rg)',
+        'Copernicium (Cn)', 'Nihonium (Nh)', 'Flerovium (Fl)', 'Moscovium (Mc)', 'Livermorium (Lv)',
+        'Tennessine (Ts)', 'Oganesson (Og)'
+    ],
+    placeholder="Select at least one reactant",
+    help="Choose the chemicals that will react.",   
+)
+# st.write("You selected:", reactants)
+
+# Catalyst Selection
+catalyst = st.selectbox(
+    'Select Catalyst (Optional)',
+    [
+       'None','Platinum (Pt)', 'Iron (Fe)', 'Zinc (Zn)'
+    ],
+    # placeholder="Select catalyst",
+    help="Choose the chemicals that will react.",
+    # index=None,    
+)
+# st.write("You selected:", catalyst)
+
+
+temperature = st.number_input('Temperature (K)', min_value=0, max_value=1000, value=300, step=1)
+
+doubt = st.text_input('Any question about the reaction?')
+
+
+# Trigger the Reaction Simulation
+if st.button('Perform Reaction'):
+    if reactants:
+        # Display input parameters
+        st.write(f"**Reactants:** {', '.join(reactants)}")
+        st.write(f"**Catalyst:** {catalyst}")
+        st.write(f"**Temperature:** {temperature} K")
+        # st.write(f"**Reaction Time:** {hours:02d}:{minutes:02d}")
+
+        # Define a prompt for the Google API
+        # prompt = (
+        #     f"Perform a chemical reaction with the following conditions:\n"
+        #     f"Reactants: {', '.join(reactants)}\n"
+        #     f"Catalyst: {catalyst}\n"
+        #     f"Temperature: {temperature} K\n"
+        #     # f"Reaction time: {hours:02d}:{minutes:02d}.\n"
+        #     f"Describe the products and their properties (color, odor, taste, state, gas emission, etc.)"
+        #     f"Let me know if you have any questions about the reaction : {doubt}"
+        # )
+
+        # Send prompt to Google genai API
+        model = genai.GenerativeModel("gemini-1.5-flash")
+        response = model.generate_content(f"Perform a chemical reaction with the following conditions and give possible list ofthe products only in buttel points:\n"
+            f"Reactants: {', '.join(reactants)}\n"
+            f"Catalyst: {catalyst}\n"
+            f"Temperature: {temperature} K\n"
+            f"Let me know if you have any questions about the reaction : {doubt}"
+            f"Give me the structural representation of bondings in the reaction"
+            f"Give the molecular weight and molecular density of the products performed by the reaction in tabular format"
+            f"Describe the products and their properties (color, odor, taste, state, gas emission, etc.)."
+            f"Give some information about catalyst in bullet points if any."
+            )
+
+        # Display the result of the reaction
+        result = response.text
+
+        # st.write(result) 
+
+        # Split the result into lines (assuming the API returns each product on a new line)
+        # for line in response.split('\n'):
+            # if ':' in line:
+                # Product name in bold, and properties in italic
+                # product, properties = line.split(':', 1)
+                # st.write(f"{product.strip()}: {properties.strip()}")
+            # else:
+                # st.write(line)  # Handle any additional lines without a colon separator
+        
+    else:
+        st.error("Please select at least one reactant.")
+
+# Footer information
+# st.write("Powered by Google Generative AI and your dataset for chemical reactions.")
+
+
+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
