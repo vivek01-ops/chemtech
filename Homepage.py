@@ -79,5 +79,5 @@ with right:
     
 
 with st.sidebar:
-    st.subheader("Made with ❤️ by ChemTech", divider="red")
-    st.image("chem.gif", use_column_width=True,width=None)
+    st.subheader("Made with ❤️ by ChemTech and Team", divider="red",  )
+    st.image("asset/chem.gif", use_column_width=True,width=None)

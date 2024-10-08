@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 
-st.set_page_config(page_title="Periodic Table", page_icon=":bar_chart:", layout="wide" )
+st.set_page_config(page_title="Periodic Table", page_icon=":bar_chart:", layout="wide", initial_sidebar_state="expanded")
 # Load the periodic table data
 def load_data():
     try:

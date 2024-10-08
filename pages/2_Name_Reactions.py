@@ -116,23 +116,22 @@ st.subheader("Perform Name Reactions", divider="red")
     
     # Input fields for user to enter new reaction details
 reaction_name = st.selectbox(
-        'Select Reaction Name',
+        'Select Name Reaction',
         df1['Reaction Name'].tolist(),
         placeholder="Select at least one reaction",
         help="Choose the Name Reaction you want to perform.",
     )
 benzene = st.selectbox(
-        'Select Reaction Name',
+        'Select Benzene Reaction',
         df2['Reaction Name'].tolist(),
         placeholder="Select at least one reaction",
         help="Choose the Benzene Reaction you want to perform.",
 )
-reactants = st.multiselect(
-        'Select Reactants',
-        elements_df['Element'].tolist(),
-        placeholder="Select at least one reactant",
-        help="Choose the chemicals that will react.",   
-    )
+compounds = st.text_input(
+        'Enter Compound (separated by commas)',
+        placeholder="Enter compounds",
+        help="Enter the compound you want to perform the reaction on.",
+)
 
 substrate = st.multiselect(
         'Select Substrate',
