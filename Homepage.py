@@ -61,23 +61,30 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-left, middle, right = st.columns(3, gap="small")
-with left:
-    # st.markdown ("Perform any reaction chemical reaction in seconds !")
-    if st.button("⚗️ Basic Reactions", type="secondary", use_container_width=True):
-        st.switch_page("pages/3_Reaction Simulator.py")
-    
 
-with middle:    
+left2, right2 = st.columns(2)
+
+with left2:    
     if st.button("👩‍🔬 Name Reactions", type="secondary", use_container_width=True):
         st.switch_page("pages/2_Name_Reactions.py")
     
+with right2:
+    if st.button("⌬ Benzene Reactions", type="secondary", use_container_width=True):
+        st.switch_page("pages/1_Benzene Reactions.py")
 
-with right:
+
+left1, right1 = st.columns(2)
+with left1:
+    # st.markdown ("Perform any reaction chemical reaction in seconds !")
+    if st.button("⚗️ Basic Reactions", type="secondary", use_container_width=True):
+        st.switch_page("pages/3_Reaction Simulator.py")
+
+with right1:
     if st.button("📊 Periodic Table", type="secondary", use_container_width=True):
         st.switch_page("pages/4_Peridic Table.py")
-    
 
+       
+    
 with st.sidebar:
     st.subheader("Made with ❤️ by ChemTech and Team", divider="red",  )
     st.image("asset/chem.gif", use_column_width=True,width=None)

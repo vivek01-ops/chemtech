@@ -14,7 +14,7 @@ def load_elements():
 # Load elements data
 elements_df = load_elements()
 #Page confiquration 
-st.set_page_config(page_title="Reaction Simulator", page_icon="🧪", layout="wide", initial_sidebar_state="auto")
+st.set_page_config(page_title="Reaction Simulator", page_icon="⚗️", layout="wide", initial_sidebar_state="auto")
 
 # Title and Introduction
 st.subheader("Chemical Reaction Simulator", divider="red")
@@ -66,7 +66,7 @@ if st.button('Perform Reaction'):
         )
 
         # Initialize the generative model
-            model = genai.GenerativeModel("gemini-1.5-pro-002")
+            model = genai.GenerativeModel("gemini-1.5-pro")
             response = model.generate_content(
                 f"Perform a chemical reaction under the following conditions and provide a list of all possible products in tabular form with their chemical names and symbols:\n"
                 f"Reactants: {', '.join(reactants)}\n"

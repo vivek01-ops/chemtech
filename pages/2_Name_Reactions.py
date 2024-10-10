@@ -60,40 +60,11 @@ name_reactions = {
     ]
 }
 
-# Data for Benzene Reactions
-benzene_reactions = {
-    "Sr.No": [
-        1, 2, 3, 4, 5
-    ],
-    "Reaction Name": [
-        "Halogenation",
-        "Nitration",
-        "Sulfonation",
-        "Friedel-Crafts Alkylation",
-        "Friedel-Crafts Acylation"
-    ],
-    "Reaction Overview": [
-        "Electrophilic aromatic substitution of benzene with halogens (Cl₂, Br₂).",
-        "Electrophilic aromatic substitution of benzene with nitric acid to form nitrobenzene.",
-        "Electrophilic aromatic substitution of benzene with sulfur trioxide (SO₃) to form benzene sulfonic acid.",
-        "Electrophilic aromatic substitution where an alkyl group is introduced into benzene.",
-        "Electrophilic aromatic substitution where an acyl group is introduced into benzene."
-    ],
-    "Catalyst": [
-        "FeCl₃ (Ferric chloride) or AlCl₃ (Aluminum chloride)",
-        "H₂SO₄ (Sulfuric acid)",
-        "H₂SO₄ (Sulfuric acid)",
-        "AlCl₃ (Aluminum chloride)",
-        "AlCl₃ (Aluminum chloride)"
-    ]
-}
-
-
 # Function to load elements from CSV
-def load_elements():
-    return pd.read_csv('elements.csv')
+def load_compounds():
+    return pd.read_csv('compounds .csv')
 
-elements_df = load_elements()
+compounds_df = load_compounds()
 
 
 # Create DataFrames
@@ -102,52 +73,53 @@ st.title("Name Reactions")
 
 st.subheader("Have a quick revision on Name and Benzene Reactions", divider="red")
 df1 = pd.DataFrame(name_reactions)
-df2 = pd.DataFrame(benzene_reactions)
+# df2 = pd.DataFrame(benzene_reactions)
 with st.expander("Show Name Reactions"):
         st.dataframe(df1, use_container_width=True, hide_index=True)
-with st.expander("Show Benzene Reactions"):
-        st.dataframe(df2, use_container_width=True, hide_index=True)
-
-# Create two columns for input and output
-# col1, col2 = st.columns([1, 2.5], gap="large")
 
 # User input for reaction details
 st.subheader("Perform Name Reactions", divider="red")
     
     # Input fields for user to enter new reaction details
 reaction_name = st.selectbox(
-        'Select Name Reaction',
+        'Select Reactants',
         df1['Reaction Name'].tolist(),
         placeholder="Select at least one reaction",
         help="Choose the Name Reaction you want to perform.",
     )
-benzene = st.selectbox(
-        'Select Benzene Reaction',
-        df2['Reaction Name'].tolist(),
-        placeholder="Select at least one reaction",
-        help="Choose the Benzene Reaction you want to perform.",
-)
+
 compounds = st.text_input(
-        'Enter Compound (separated by commas)',
-        placeholder="Enter compounds",
-        help="Enter the compound you want to perform the reaction on.",
+        'Enter Reactants (**seperated by commas**)',
+        # compounds_df['Compounds'].tolist(),
+
+        placeholder="Select at least one reaction",
+        help="Type the name or formula of reactant",
 )
 
-substrate = st.multiselect(
-        'Select Substrate',
-        elements_df['Element'].tolist(),
-        placeholder="Select at least one substrate",
-        help="Choose the chemicals that will react as substrate.",
+substrate = st.text_input(
+        'Enter Substrate (**seperated by commas**)',
+        # compounds_df['Compounds'].tolist(),
+
+        placeholder="Select at least one reaction",
+        help="Type the name or formula of substrate",
+    )
+
+catalyst = st.text_input(
+        'Enter Catalyst (**seperated by commas**)',
+        # compounds_df['Compounds'].tolist(),
+
+        placeholder="Select at least one reaction",
+        help="Type the name or formula of catalyst",
     )
 temperature = st.number_input('Temperature (K)', min_value=0, max_value=1000, value=300, step=1)    
 
     # Trigger the Reaction Simulation
 if st.button('Perform Reaction'):
-        if reactants:
+        if compounds:
             # Display input parameters
             st.write(f"**You Selected:** {reaction_name}")
-            st.write(f"**You Selected:** {benzene}")
-            st.header("Reaction Information")   
+            # st.write(f"**You Selected:** {benzene}")
+            st.header("Result", divider="red")   
         
             with st.status('Performing the reaction...', expanded=True):
                 try:
@@ -159,13 +131,8 @@ if st.button('Perform Reaction'):
                         f"1. Definition, "
                         f"2. Conditions (temperature, catalyst, etc.), "
                         f"3. Mechanism, and "
-                        f"4. General structure of the product in ASCII format.\n"
-                        f"Provide detailed information on the {benzene} reaction, including: "
-                        f"1. Definition, "
-                        f"2. Conditions (temperature, catalyst, etc.), "
-                        f"3. Mechanism, and "
                         f"4. General structure of the product in ASCII format.\n"   
-                        f"Also, simulate a reaction using the reactants {', '.join(reactants)} and the substrates {', '.join(substrate)} "
+                        f"Also, perform a reaction using the reactants {', '.join(compounds)} , {', '.join(catalyst)}and the substrates {', '.join(substrate)}. And show the reaction also"
                         f"under the typical conditions of {reaction_name}, and describe the expected product with its chemical names."
                     )
 
