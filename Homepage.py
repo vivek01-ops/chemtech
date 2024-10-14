@@ -3,7 +3,7 @@ import streamlit as st
 # Set page configuration
 st.set_page_config(
     page_title="Chemical Reaction Simulator",
-    page_icon="℞☤💊🥼",
+    page_icon="💊🥼",
     layout="centered",
     initial_sidebar_state="collapsed"
 )
