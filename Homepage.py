@@ -47,7 +47,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 st.markdown("<h1 class='landing-title'>Welcome to the <span style='color: #f78393;'>ChemTech</span></h1>", unsafe_allow_html=True)
-st.markdown("<p class='landing-subtitle' style='color: white;'>Your Gateway to Advanced Chemical Learning and Simulation!</p>", unsafe_allow_html=True)
+st.markdown("<p class='landing-subtitle' style='color: gray;'>Your Gateway to Advanced Chemical Learning and Simulation!</p>", unsafe_allow_html=True)
 
 st.markdown("""
 <div class='feature-section' style="margin-bottom: 50px;">
