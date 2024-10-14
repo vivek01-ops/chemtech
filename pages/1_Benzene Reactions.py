@@ -111,7 +111,7 @@ if st.button('Perform Reaction'):
                         f"3. Mechanism, and "
                         f"4. General structure of the product in ASCII format.\n"   
                         f"Also, perform a reaction using the reactants {', '.join(compounds)} , {', '.join(catalyst)}and the substrates {', '.join(substrate)}. And show the reaction also"
-                        f"under the typical conditions of {benzene} reaction, and describe the expected product with its chemical names."
+                        f"under the typical conditions of {benzene} reaction, and describe the  expected product with its chemical names."
                         f"Show headings in bold and slightly bigger font size "
                     )
 

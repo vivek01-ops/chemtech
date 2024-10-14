@@ -11,6 +11,7 @@ genai.configure(api_key=os.environ["GOOGLE_API_KEY"])
 
 st.set_page_config(page_title="Name Reactions", page_icon="🧪", layout="wide", initial_sidebar_state="auto")
 
+
 # Data for Name Reactions
 name_reactions = {
     "Sr.No": [
@@ -132,7 +133,8 @@ if st.button('Perform Reaction'):
                         f"2. Conditions (temperature, catalyst, etc.), "
                         f"3. Mechanism, and "
                         f"4. General structure of the product in ASCII format.\n"   
-                        f"Also, perform a reaction using the reactants {', '.join(compounds)} , {', '.join(catalyst)}and the substrates {', '.join(substrate)}. And show the reaction also"
+                        f"Also, perform a reaction using the reactants {', '.join(compounds)} , {', '.join(catalyst)}and the substrates {', '.join(substrate)}. And show the reaction in text."
+                        f"display the chemical formulas of reactants, substrates, and, catalyst and products."
                         f"under the typical conditions of {reaction_name}, and describe the expected product with its chemical names."
                     )
 

@@ -66,7 +66,7 @@ if st.button('Perform Reaction'):
         )
 
         # Initialize the generative model
-            model = genai.GenerativeModel("gemini-1.5-pro")
+            model = genai.GenerativeModel("gemini-1.5-pro-002")
             response = model.generate_content(
                 f"Perform a chemical reaction under the following conditions and provide a list of all possible products in tabular form with their chemical names and symbols:\n"
                 f"Reactants: {', '.join(reactants)}\n"

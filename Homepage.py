@@ -47,30 +47,30 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 st.markdown("<h1 class='landing-title'>Welcome to the <span style='color: #f78393;'>ChemTech</span></h1>", unsafe_allow_html=True)
-st.markdown("<p class='landing-subtitle'>Your Gateway to Advanced Chemical Learning and Simulation!</p>", unsafe_allow_html=True)
+st.markdown("<p class='landing-subtitle' style='color: white;'>Your Gateway to Advanced Chemical Learning and Simulation!</p>", unsafe_allow_html=True)
 
 st.markdown("""
 <div class='feature-section' style="margin-bottom: 50px;">
     <h2 style = "color: #4A90E2;">Why use our AI-powered tool?</h2>
-    <p >🔍 Explore over 100+ elements and their properties.</p>
-    <p> 📖 Easy understanding of Name Reactions</p>
-    <p>⚡ Simulate reactions with customized conditions and catalysts.</p>
-    <p>🎨 Get detailed information on products, including structure and properties.</p>
-    <p>📊 Visualize molecular weights and densities in a tabular format.</p>
+    <p style = "color: white;">🔍 Explore over 100+ elements and their properties.</p>
+    <p style = "color: white;">📖 Easy understanding of Name Reactions</p>
+    <p style = "color: white;">⚡ Simulate reactions with customized conditions and catalysts.</p>
+    <p style = "color: white;">🎨 Get detailed information on products, including structure and properties.</p>
+    <p style = "color: white;">📊 Visualize molecular weights and densities in a tabular format.</p>
     
 </div>
 """, unsafe_allow_html=True)
 
 
 left2, right2 = st.columns(2)
-
-with left2:    
-    if st.button("👩‍🔬 Name Reactions", type="secondary", use_container_width=True):
-        st.switch_page("pages/2_Name_Reactions.py")
     
-with right2:
+with left2:
     if st.button("⌬ Benzene Reactions", type="secondary", use_container_width=True):
         st.switch_page("pages/1_Benzene Reactions.py")
+
+with right2:    
+    if st.button("👩‍🔬 Name Reactions", type="secondary", use_container_width=True):
+        st.switch_page("pages/2_Name_Reactions.py")
 
 
 left1, right1 = st.columns(2)
@@ -88,3 +88,5 @@ with right1:
 with st.sidebar:
     st.subheader("Made with ❤️ by ChemTech and Team", divider="red",  )
     st.image("asset/chem.gif", use_column_width=True,width=None)
+
+st.write("**Note:** ")
