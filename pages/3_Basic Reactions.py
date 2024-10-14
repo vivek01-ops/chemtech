@@ -60,7 +60,7 @@ if st.button('Perform Reaction'):
             reaction_representation = (
             f"""
             **Reaction**:
-            **Reactants:** {reactants[0]} + {reactants[1]} --(**Temp:** {temperature} K)--> 
+            **Reactants:** {reactants[0]} + {substrate[0]} --(**Temp:** {temperature} K)--> 
             **Products:** 
             """.strip()
         )
