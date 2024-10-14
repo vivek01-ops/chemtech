@@ -52,11 +52,11 @@ st.markdown("<p class='landing-subtitle' style='color: white;'>Your Gateway to A
 st.markdown("""
 <div class='feature-section' style="margin-bottom: 50px;">
     <h2 style = "color: #4A90E2;">Why use our AI-powered tool?</h2>
-    <p style = "color: white;">🔍 Explore over 100+ elements and their properties.</p>
-    <p style = "color: white;">📖 Easy understanding of Name Reactions</p>
-    <p style = "color: white;">⚡ Simulate reactions with customized conditions and catalysts.</p>
-    <p style = "color: white;">🎨 Get detailed information on products, including structure and properties.</p>
-    <p style = "color: white;">📊 Visualize molecular weights and densities in a tabular format.</p>
+    <p style = "color: gray;">🔍 Explore over 100+ elements and their properties.</p>
+    <p style = "color: gray;">📖 Easy understanding of Name Reactions</p>
+    <p style = "color: gray;">⚡ Simulate reactions with customized conditions and catalysts.</p>
+    <p style = "color: gray;">🎨 Get detailed information on products, including structure and properties.</p>
+    <p style = "color: gray;">📊 Visualize molecular weights and densities in a tabular format.</p>
     
 </div>
 """, unsafe_allow_html=True)
