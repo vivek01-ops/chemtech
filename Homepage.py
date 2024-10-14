@@ -70,14 +70,14 @@ with left2:
 
 with right2:    
     if st.button("👩‍🔬 Name Reactions", type="secondary", use_container_width=True):
-        st.switch_page("pages/2_Name_Reactions.py")
+        st.switch_page("pages/2_Name Reactions.py")
 
 
 left1, right1 = st.columns(2)
 with left1:
     # st.markdown ("Perform any reaction chemical reaction in seconds !")
     if st.button("⚗️ Basic Reactions", type="secondary", use_container_width=True):
-        st.switch_page("pages/3_Reaction Simulator.py")
+        st.switch_page("pages/3_Basic Reactions.py")
 
 with right1:
     if st.button("📊 Periodic Table", type="secondary", use_container_width=True):
