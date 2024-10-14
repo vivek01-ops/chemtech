@@ -16,10 +16,6 @@ COPY . .
 # Expose the port Streamlit runs on
 EXPOSE 8501
 
-# Streamlit-specific environment settings
-ENV STREAMLIT_SERVER_HEADLESS=true
-ENV STREAMLIT_SERVER_PORT=8501
-ENV STREAMLIT_SERVER_ADDRESS=0.0.0.0
 
 # Command to run the Streamlit app
 CMD ["streamlit", "run", "Homepage.py"]
