@@ -58,12 +58,7 @@ if st.button('Perform Reaction'):
         st.write(f"**Temperature:** {temperature} K")
         st.write(f"**Substrate:** {', '.join(substrate)}")
         
-        with st.status('Performing the reaction...', expanded=True):
-            for seconds in range(40):
-                st.write(f"⏳ {seconds} seconds have passed")
-                time.sleep(1)
-            st.write(":material/check:Wait")
-            
+        with st.status('Performing the reaction...', expanded=True):                     
             reaction_representation = (
             f"""
             **Reaction**:
