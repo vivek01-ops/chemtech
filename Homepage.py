@@ -7,7 +7,7 @@ st.set_page_config(
     layout="centered",
     initial_sidebar_state="collapsed"
 )
-st.set_option('de.showTopBar', True)
+# st.set_option('de.showTopBar', True)
 
 # Custom CSS to style the page
 st.markdown("""
