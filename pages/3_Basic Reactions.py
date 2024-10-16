@@ -49,6 +49,8 @@ doubt = st.text_input('Any question about the reaction?')
 
 # Trigger the Reaction Simulation
 if st.button('Perform Reaction'):
+    st.toast('The result will be generated shortly, please wait a moment!')
+    time.sleep(5)
     if reactants:
         # Display input parameters
         st.write(f"**Reactants:** {', '.join(reactants)}")
