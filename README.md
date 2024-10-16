@@ -1,5 +1,4 @@
-# ChemTech: Chemical Reaction Simulator
-
+# ChemTech
 ChemTech is a web application developed using Python and Streamlit that simulates chemical reactions. It leverages Google Generative AI to provide insights into various chemical processes based on user-defined inputs. The application features an interactive periodic table, detailed reaction information, and the capability to filter elements based on specific properties.
 
 
