@@ -65,6 +65,11 @@ if st.button('Perform Reaction'):
             **Reactants:** {reactants[0]} + {substrate[0]} --(**Temp:** {temperature} K)--> 
             **Products:** 
             """.strip()
+
+        for seconds in range(40):
+            st.write(f"⏳ {seconds} seconds have passed")
+            time.sleep(1)
+        st.write(":material/check:")
         )
 
         # Initialize the generative model
