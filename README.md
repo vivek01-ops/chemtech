@@ -36,4 +36,4 @@ To run the ChemTech application locally, follow these steps:
 - Input any additional parameters for the reaction simulation.
 - Click the 'Simulate' button to view the results.
 
-  # *Enjoy you chemistry journey!*
+  # *Enjoy your chemistry journey!*
