@@ -66,10 +66,10 @@ if st.button('Perform Reaction'):
             **Products:** 
             """.strip()
 
-        for seconds in range(40):
-            st.write(f"⏳ {seconds} seconds have passed")
-            time.sleep(1)
-        st.write(":material/check:")
+            for seconds in range(40):
+                st.write(f"⏳ {seconds} seconds have passed")
+                time.sleep(1)
+            st.write(":material/check:")
         )
 
         # Initialize the generative model
