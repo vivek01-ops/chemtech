@@ -101,7 +101,7 @@ if not filtered_df.empty:
         # Display as a table
         st.subheader("Element Details", divider="red")
         st.dataframe(element_df , use_container_width=True) 
-st.info("Use the sidebar to filter elements!", icon="❗")
+st.info("Use the sidebar to filter elements!", icon="ⓘ")
 
 st.sidebar.subheader("About Interactive Periodic Table: ", divider="orange")
 st.sidebar.info("The Interactive Periodic Table is an educational and research-oriented tool designed to help users explore chemical elements with ease. This app offers a streamlined and visually appealing way to filter and investigate the properties of elements based on various chemical and physical attributes. The goal is to provide chemistry and students, educators with an accessible, interactive, and informative platform to study the periodic table.",)
