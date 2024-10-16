@@ -82,9 +82,8 @@ with left1:
 with right1:
     if st.button("📊 Periodic Table", type="secondary", use_container_width=True):
         st.switch_page("pages/4_Peridic Table.py")
-
-       
     
 with st.sidebar:
-    st.subheader("Made with ❤️ by ChemTech and Team", divider="red",  )
+    st.subheader("Made with ❤️ by ChemTech and Team", divider="blue")
     st.image("asset/chem.gif", use_column_width=True,width=None)
+
