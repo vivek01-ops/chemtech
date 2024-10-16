@@ -113,4 +113,4 @@ if st.button('Perform Reaction'):
         st.error("Please select at least one reactant.")
         
 st.sidebar.subheader("About Reaction Simulator: ", divider="orange")
-st.sidebar.info("The Chemical Reaction Simulator is a powerful, AI-driven tool designed to simulate chemical reactions dynamically by allowing users to select various chemical elements, catalysts, and conditions. It leverages Generative AI to predict possible reaction outcomes, generating insightful information about the resulting products, including their properties, molecular weight, and density.",)
+st.sidebar.info("📌 The Chemical Reaction Simulator is a powerful, AI-driven tool designed to simulate chemical reactions dynamically by allowing users to select various chemical elements, catalysts, and conditions. It leverages Generative AI to predict possible reaction outcomes, generating insightful information about the resulting products, including their properties, molecular weight, and density.",)
