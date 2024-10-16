@@ -84,6 +84,6 @@ with right1:
         st.switch_page("pages/4_Peridic Table.py")
     
 with st.sidebar:
-    st.subheader("Made with ❤️ by ChemTech and Team", divider="blue")
+    st.subheader("Made with ❤️ by ChemTech and Team", divider="red")
     st.image("asset/chem.gif", use_column_width=True,width=None)
 
