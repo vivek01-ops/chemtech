@@ -95,7 +95,7 @@ temperature = st.number_input('Temperature (K)', min_value=0, max_value=1000, va
 
     # Trigger the Reaction Simulation
 if st.button('Perform Reaction'):
-        if compounds:
+        if compounds and substrate:
             st.write(f"**You Selected:** {benzene}")
             st.subheader("Result", divider="red")   
         
