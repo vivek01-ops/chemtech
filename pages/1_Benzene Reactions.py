@@ -110,7 +110,7 @@ if st.button('Perform Reaction'):
                     f"Perform a reaction using the reactants {compounds}, catalysts {catalyst}, "
                     f"and substrates {substrate}. Show the product. Display the chemical formulas of "
                     f"reactants, catalysts, substrates, and products. Provide detailed information "
-                    f"on the {reaction_name} reaction, including: 1. Definition, 2. Conditions (temperature, catalyst, etc.), "
+                    f"on the {benzene} reaction, including: 1. Definition, 2. Conditions (temperature, catalyst, etc.), "
                     f"3. Mechanism, and 4. General structure of the product in ASCII format. "
                     f"Describe the product with its chemical names and formulas."
                 )
