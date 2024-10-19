@@ -43,8 +43,8 @@ benzene_reactions = {
 
 @st.cache_data
 # Function to load elements from CSV
-def load_elements():
-    return pd.read_csv('elements.csv')
+# def load_elements():
+#     return pd.read_csv('elements.csv')
 
 elements_df = load_elements()
 
