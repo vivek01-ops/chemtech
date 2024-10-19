@@ -63,14 +63,14 @@ name_reactions = {
 }
 
 @st.cache_data
-def load_compounds():
-    try:
-        return pd.read_csv('compounds.csv')
-    except FileNotFoundError:
-        st.error("The 'compounds.csv' file is missing.")
-        return pd.DataFrame()
+# def load_compounds():
+#     try:
+#         return pd.read_csv('compounds.csv')
+#     except FileNotFoundError:
+#         st.error("The 'compounds.csv' file is missing.")
+#         return pd.DataFrame()
 
-compounds_df = load_compounds()
+# compounds_df = load_compounds()
 
 # Utility function to convert HTML-like text to LaTeX
 def convert_to_latex_format(text):
