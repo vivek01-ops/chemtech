@@ -129,7 +129,7 @@ if st.button('Perform Reaction'):
                     # Combine the prompt into one string
                     prompt = (
                         f"perform a reaction using the reactants {', '.join(compounds)} , {', '.join(catalyst)}and the substrates {', '.join(substrate)}. show the product."
-                        f"Display the reaction in latext format"
+                        f"Display the reaction in LaTeX format"
                         f"display the chemical formulas of reactants {', '.join(compounds)} , {', '.join(catalyst)}and the substrates {', '.join(substrate)} and products."
                         f"Provide detailed information on the {reaction_name} reaction, including: "
                         f"1. Definition, "
