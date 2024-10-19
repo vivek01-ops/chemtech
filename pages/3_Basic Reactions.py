@@ -14,10 +14,10 @@ def load_elements():
 # Load elements data
 elements_df = load_elements()
 #Page confiquration 
-st.set_page_config(page_title="Reaction Simulator", page_icon="⚗️", layout="wide", initial_sidebar_state="auto")
+st.set_page_config(page_title="Basic Reaction", page_icon="⚗️", layout="wide", initial_sidebar_state="auto")
 
 # Title and Introduction
-st.subheader("Chemical Reaction Simulator", divider="red")
+st.subheader("Basic Chemical Reaction", divider="red")
 # st.write("Simulate chemical reactions by selecting reactants, catalysts, and conditions.")
 
 # Reactant Selection
