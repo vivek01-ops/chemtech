@@ -46,7 +46,7 @@ benzene_reactions = {
 # def load_elements():
 #     return pd.read_csv('elements.csv')
 
-elements_df = load_elements()
+# elements_df = load_elements()
 
 def convert_to_latex_format(text):
     return re.sub(r'<sub>(\d+)</sub>', r'_\1', text)
