@@ -58,8 +58,8 @@ if st.button('Perform Reaction'):
         
         
         with st.status('Performing the reaction...', expanded=True):   
-            st.toast('The result will be generated shortly, please wait a moment!')
-            time.sleep(5)
+            st.toast('⏳ The reaction is being performed. This may take more than 40 seconds. Please wait...!')
+            time.sleep(.5)
             reaction_representation = (
             f"""
             **Reaction**:
