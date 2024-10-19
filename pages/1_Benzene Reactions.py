@@ -103,6 +103,8 @@ if st.button('Perform Reaction'):
             st.subheader("Result", divider="red")   
         
             with st.status('Performing the reaction...', expanded=True):
+                st.toast('⏳ The reaction is being performed. This may take more than 40 seconds. Please wait...!')
+                time.sleep(.5)
                 try:
                     # Send prompt to Google genai API
                     model = genai.GenerativeModel("gemini-1.5-pro-002")
