@@ -143,7 +143,7 @@ if st.button('Perform Reaction'):
                     result = response.text
                     result = convert_to_latex_format(result)
                     sections = result.split("\n\n")   # Assuming the response is divided by two newlines between sections
-                    st.write(result)
+                    st.write(sections)
                     st.success("Done", **{"icon": "✔"})
                 except Exception as e:
                     st.error(f"**Error:** There was an issue with the API request: {e}")
