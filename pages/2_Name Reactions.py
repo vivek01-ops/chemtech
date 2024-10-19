@@ -116,7 +116,7 @@ temperature = st.number_input('Temperature (K)', min_value=0, max_value=1000, va
 
     # Trigger the Reaction Simulation
 if st.button('Perform Reaction'):
-        if compounds and substrate:
+        if compounds:
             # Display input parameters
             st.write(f"**You Selected:** {reaction_name}")
             # st.write(f"**You Selected:** {benzene}")
@@ -128,14 +128,15 @@ if st.button('Perform Reaction'):
                     model = genai.GenerativeModel("gemini-1.5-pro-002")
                     # Combine the prompt into one string
                     prompt = (
+                        f"perform a reaction using the reactants {', '.join(compounds)} , {', '.join(catalyst)}and the substrates {', '.join(substrate)}. show the product."
+                        f"Display the reaction in latext format"
+                        f"display the chemical formulas of reactants {', '.join(compounds)} , {', '.join(catalyst)}and the substrates {', '.join(substrate)} and products."
                         f"Provide detailed information on the {reaction_name} reaction, including: "
                         f"1. Definition, "
                         f"2. Conditions (temperature, catalyst, etc.), "
-                        f"3. Mechanism, and "
+                        f"3. Mechanism "
                         f"4. General structure of the product in ASCII format.\n"   
-                        f"Also, perform a reaction using the reactants {', '.join(compounds)} , {', '.join(catalyst)}and the substrates {', '.join(substrate)}. And show the reaction in text."
-                        f"display the chemical formulas of reactants, substrates, and, catalyst and products."
-                        f"under the typical conditions of {reaction_name}, and describe the expected product with its chemical names."
+                        f"under the typical conditions of {reaction_name}, and describe product with its chemical names and chemical formulas"
                     )
 
                     response = model.generate_content(prompt)
