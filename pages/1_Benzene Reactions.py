@@ -41,13 +41,15 @@ benzene_reactions = {
     ]
 }
 
-
+@st.cache_data
 # Function to load elements from CSV
 def load_elements():
     return pd.read_csv('elements.csv')
 
 elements_df = load_elements()
 
+def convert_to_latex_format(text):
+    return re.sub(r'<sub>(\d+)</sub>', r'_\1', text)
 
 # Create DataFrames
 st.title("Benzene Reactions")
@@ -72,7 +74,7 @@ compounds = st.text_input(
         'Enter Reactants (**seperated by commas**)',
         # compounds_df['Compounds'].tolist(),
 
-        placeholder="Select at least one reaction",
+        placeholder="e.g., H2O, NaCl",
         help="Type the name or formula of reactant",
 )
 
@@ -80,7 +82,7 @@ substrate = st.text_input(
         'Enter Substrate (**seperated by commas**)',
         # compounds_df['Compounds'].tolist(),
 
-        placeholder="Select at least one reaction",
+        placeholder="e.g., ethanol, benzene",
         help="Type the name or formula of substrate",
     )
 
@@ -88,14 +90,14 @@ catalyst = st.text_input(
         'Enter Catalyst (**seperated by commas**)',
         # compounds_df['Compounds'].tolist(),
 
-        placeholder="Select at least one reaction",
+        placeholder="e.g., H2SO4, AlCl3",
         help="Type the name or formula of catalyst",
     )
 temperature = st.number_input('Temperature (K)', min_value=0, max_value=1000, value=300, step=1)    
 
     # Trigger the Reaction Simulation
 if st.button('Perform Reaction'):
-        if compounds and substrate:
+        if compounds:
             st.write(f"**You Selected:** {benzene}")
             st.subheader("Result", divider="red")   
         
@@ -105,21 +107,18 @@ if st.button('Perform Reaction'):
                     model = genai.GenerativeModel("gemini-1.5-pro-002")
                     # Combine the prompt into one string
                     prompt = (
-                        f"Provide detailed information on the {benzene} reaction, including: "
-                        f"1. Definition, "
-                        f"2. Conditions (temperature, catalyst, etc.), "
-                        f"3. Mechanism, and "
-                        f"4. General structure of the product in ASCII format.\n"   
-                        f"Also, perform a reaction using the reactants {', '.join(compounds)} , {', '.join(catalyst)}and the substrates {', '.join(substrate)}. And show the reaction also"
-                        f"under the typical conditions of {benzene} reaction, and describe the  expected product with its chemical names."
-                        f"Show headings in bold and slightly bigger font size "
-                    )
+                    f"Perform a reaction using the reactants {compounds}, catalysts {catalyst}, "
+                    f"and substrates {substrate}. Show the product. Display the chemical formulas of "
+                    f"reactants, catalysts, substrates, and products. Provide detailed information "
+                    f"on the {reaction_name} reaction, including: 1. Definition, 2. Conditions (temperature, catalyst, etc.), "
+                    f"3. Mechanism, and 4. General structure of the product in ASCII format. "
+                    f"Describe the product with its chemical names and formulas."
+                )
 
                     response = model.generate_content(prompt)
-                    
-                    # Display the result of the reaction
                     result = response.text
-                    sections = result.split("\n\n")   # Assuming the response is divided by two newlines between sections
+                    result = convert_to_latex_format(result)
+                    # Assuming the response is divided by two newlines between sections
                     st.write(result)
                     st.success("Done", **{"icon": "✔"})
                 except Exception as e:
