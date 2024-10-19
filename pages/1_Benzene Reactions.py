@@ -4,6 +4,7 @@ import os
 import time
 import google.generativeai as genai
 import pandas as pd
+import re
 
 # Set up API Key
 os.environ["GOOGLE_API_KEY"] = "AIzaSyAdS57TfssxTs_Z0_YTXB3kikFv7KqWtA0"
