@@ -87,3 +87,12 @@ with right1:
 with st.sidebar:
     st.subheader("Made with ❤️ by ChemTech and Team", divider="red")
     st.image("asset/chem.gif", use_column_width=True,width=None)
+    
+st.markdown(
+    """
+    <footer style="text-align: center; margin-top: 20px;">
+        <p style="font-size: 13px; margin-bottom: 5px; font-style: italic; color: #C3FFD7;">✨ Powered by ChemTech - Where Chemistry Meets Innovation ✨</p>
+    </footer>
+    """,
+    unsafe_allow_html=True
+)
