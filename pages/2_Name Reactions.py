@@ -77,7 +77,7 @@ def convert_to_latex_format(text):
     return re.sub(r'<sub>(\d+)</sub>', r'_\1', text)
 
 # Display the main page
-st.title("Name Reactions Simulator")
+st.title("Name Reactions")
 st.subheader("Quick Revision of Name and Benzene Reactions", divider="red")
 
 # Display the Name Reactions DataFrame
