@@ -71,7 +71,7 @@ st.markdown("""
 columns_to_display = ['Atomic Number', 'Element', 'Symbol', 'Atomic Weight', 'Valency','Acidity', 'Group', 'State']
 filtered_df = filtered_df[columns_to_display]
 
-st.dataframe(filtered_df, use_container_width=True, height=420, hide_insdex=True)  # Adjust width as needed
+st.dataframe(filtered_df, use_container_width=True, height=420, hide_index=True)  # Adjust width as needed
 
 # Display individual element details when clicked
 if not filtered_df.empty:
