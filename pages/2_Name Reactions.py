@@ -122,7 +122,7 @@ if st.button('Perform Reaction'):
         st.write(f"**Reaction Selected:** {reaction_name}")
         st.header("Reaction Result", divider="red")
 
-        with st.spinner('Performing the reaction...'):
+        with st.spinner('Performing the reaction...', expanded=True):
             try:
                 # Generate the prompt for Google GenAI API
                 model = genai.GenerativeModel("gemini-1.5-pro-002")
