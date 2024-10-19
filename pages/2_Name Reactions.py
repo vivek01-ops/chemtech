@@ -62,99 +62,93 @@ name_reactions = {
     ]
 }
 
-def convert_to_latex_format(text):
-    return re.sub(r'<sub>(\d+)</sub>', r'_\1', text)
-
-# Function to load elements from CSV
+@st.cache_data
 def load_compounds():
-    return pd.read_csv('compounds .csv')
+    try:
+        return pd.read_csv('compounds.csv')
+    except FileNotFoundError:
+        st.error("The 'compounds.csv' file is missing.")
+        return pd.DataFrame()
 
 compounds_df = load_compounds()
 
+# Utility function to convert HTML-like text to LaTeX
+def convert_to_latex_format(text):
+    return re.sub(r'<sub>(\d+)</sub>', r'_\1', text)
 
-# Create DataFrames
+# Display the main page
+st.title("Name Reactions Simulator")
+st.subheader("Quick Revision of Name and Benzene Reactions", divider="red")
 
-st.title("Name Reactions")
-
-st.subheader("Have a quick revision on Name and Benzene Reactions", divider="red")
-df1 = pd.DataFrame(name_reactions)
-# df2 = pd.DataFrame(benzene_reactions)
+# Display the Name Reactions DataFrame
+df_name_reactions = pd.DataFrame(name_reactions)
 with st.expander("Show Name Reactions"):
-        st.dataframe(df1, use_container_width=True, hide_index=True)
+    st.dataframe(df_name_reactions, use_container_width=True, hide_index=True)
 
-# User input for reaction details
+# Input section for performing name reactions
 st.subheader("Perform Name Reactions", divider="red")
-    
-    # Input fields for user to enter new reaction details
+
 reaction_name = st.selectbox(
-        'Select Reactants',
-        df1['Reaction Name'].tolist(),
-        placeholder="Select at least one reaction",
-        help="Choose the Name Reaction you want to perform.",
-    )
+    'Select a Reaction',
+    df_name_reactions['Reaction Name'].tolist(),
+    placeholder="Select at least one reaction",
+    help="Choose the Name Reaction you want to perform."
+)
 
 compounds = st.text_input(
-        'Enter Reactants (**seperated by commas**)',
-        # compounds_df['Compounds'].tolist(),
-
-        placeholder="Select at least one reaction",
-        help="Type the name or formula of reactant",
+    'Enter Reactants (separated by commas)',
+    placeholder="e.g., H2O, NaCl",
+    help="Type the name or formula of reactants."
 )
 
 substrate = st.text_input(
-        'Enter Substrate (**seperated by commas**)',
-        # compounds_df['Compounds'].tolist(),
-
-        placeholder="Select at least one reaction",
-        help="Type the name or formula of substrate",
-    )
+    'Enter Substrates (separated by commas)',
+    placeholder="e.g., ethanol, benzene",
+    help="Type the name or formula of substrates."
+)
 
 catalyst = st.text_input(
-        'Enter Catalyst (**seperated by commas**)',
-        # compounds_df['Compounds'].tolist(),
+    'Enter Catalysts (separated by commas)',
+    placeholder="e.g., H2SO4, AlCl3",
+    help="Type the name or formula of catalysts."
+)
 
-        placeholder="Select at least one reaction",
-        help="Type the name or formula of catalyst",
-    )
-temperature = st.number_input('Temperature (K)', min_value=0, max_value=1000, value=300, step=1)    
+temperature = st.number_input('Temperature (K)', min_value=0, max_value=1000, value=300, step=1)
 
-    # Trigger the Reaction Simulation
+# Perform the reaction
 if st.button('Perform Reaction'):
-        if compounds:
-            # Display input parameters
-            st.write(f"**You Selected:** {reaction_name}")
-            # st.write(f"**You Selected:** {benzene}")
-            st.header("Result", divider="red")   
-        
-            with st.status('Performing the reaction...', expanded=True):
-                try:
-                    # Send prompt to Google genai API
-                    model = genai.GenerativeModel("gemini-1.5-pro-002")
-                    # Combine the prompt into one string
-                    prompt = (
-                        f"perform a reaction using the reactants {', '.join(compounds)} , {', '.join(catalyst)}and the substrates {', '.join(substrate)}. show the product."
-                        f"Display the reaction"
-                        f"display the chemical formulas of reactants {', '.join(compounds)} , {', '.join(catalyst)}and the substrates {', '.join(substrate)} and products."
-                        f"Provide detailed information on the {reaction_name} reaction, including: "
-                        f"1. Definition, "
-                        f"2. Conditions (temperature, catalyst, etc.), "
-                        f"3. Mechanism "
-                        f"4. General structure of the product in ASCII format.\n"   
-                        f"under the typical conditions of {reaction_name}, and describe product with its chemical names and chemical formulas"
-                    )
+    if compounds:
+        # Display input parameters
+        st.write(f"**Reaction Selected:** {reaction_name}")
+        st.header("Reaction Result", divider="red")
 
-                    response = model.generate_content(prompt)
-                    result = response.text
-                    result = convert_to_latex_format(result)
-                    sections = result.split("\n\n")   # Assuming the response is divided by two newlines between sections
-                    st.write(sections)
-                    st.success("Done", **{"icon": "✔"})
-                except Exception as e:
-                    st.error(f"**Error:** There was an issue with the API request: {e}")
-                    
-            st.warning("Result is generated by Generative AI, it can make mistakes in some cases, please cross check the result from your side")
-        else:
-            st.error("Please ensure that you have provided inputs of both **reactants** and **substrate**.")
+        with st.spinner('Performing the reaction...'):
+            try:
+                # Generate the prompt for Google GenAI API
+                model = genai.GenerativeModel("gemini-1.5-pro-002")
+                prompt = (
+                    f"Perform a reaction using the reactants {compounds}, catalysts {catalyst}, "
+                    f"and substrates {substrate}. Show the product. Display the chemical formulas of "
+                    f"reactants, catalysts, substrates, and products. Provide detailed information "
+                    f"on the {reaction_name} reaction, including: 1. Definition, 2. Conditions (temperature, catalyst, etc.), "
+                    f"3. Mechanism, and 4. General structure of the product in ASCII format. "
+                    f"Describe the product with its chemical names and formulas."
+                )
+
+                # Call the API and fetch the response
+                response = model.generate_content(prompt)
+                result = response.text
+                result = convert_to_latex_format(result)
+
+                # Display the result
+                st.write(result)
+                st.success("Reaction simulation completed successfully!")
+            except Exception as e:
+                st.error(f"There was an error with the API request: {e}")
+
+        st.warning("Note: The result is generated by AI and may require validation.")
+    else:
+        st.error("Please provide input for reactants, substrates, and catalysts.")
 
 st.sidebar.subheader("About Name Reaction Simulator: ", divider="orange")
 st.sidebar.info("📌 The Name Reactions and Benzene Reactions Simulator is an advanced AI-powered tool designed to help chemistry students to explore, learn and simulate chemical reactions. The app focuses on well-known Name Reactions and Benzene Reactions, offering detailed information about the mechanisms, conditions, and products of these reactions. Additionally, users can simulate reactions by selecting specific reactants and substrates, with detailed results generated using Generative AI.",)
