@@ -140,9 +140,8 @@ if st.button('Perform Reaction'):
                     )
 
                     response = model.generate_content(prompt)
-                    
-                    # Display the result of the reaction
                     result = response.text
+                    result = convert_to_latex_format(result)
                     sections = result.split("\n\n")   # Assuming the response is divided by two newlines between sections
                     st.write(result)
                     st.success("Done", **{"icon": "✔"})
