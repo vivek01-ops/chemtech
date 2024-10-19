@@ -75,7 +75,7 @@ st.dataframe(filtered_df, use_container_width=True, height=420, hide_index=True)
 
 # Display individual element details when clicked
 if not filtered_df.empty:
-    selected_element = st.selectbox('Select an Element', options=[''] + filtered_df['Element'].tolist(), placeholder="Select an element")
+    selected_element = st.selectbox('Select an Element', options=[''] + filtered_df['Element'].tolist())
     st.write(f"You selected: {selected_element}")
     if selected_element:
         element_info = df[df['Element'] == selected_element].iloc[0]
