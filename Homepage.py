@@ -52,7 +52,7 @@ st.markdown("<p class='landing-subtitle' style='color: gray;'>Your Gateway to Ad
 
 st.markdown("""
 <div class='feature-section' style="margin-bottom: 50px;">
-    <h2 style = "color: #4A90E2;">Why use our AI-powered **ChemTech** application..?</h2>
+    <h2 style = "color: #4A90E2;">Why use our AI-powered tool..?</h2>
     <p style = "color: gray;">🔍 Explore over 100+ elements and their properties.</p>
     <p style = "color: gray;">📖 Easy understanding of Name Reactions and Benzene Reactions</p>
     <p style = "color: gray;">⚡ Perforom reactions with customized conditions and catalysts.</p>
