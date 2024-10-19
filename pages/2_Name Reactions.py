@@ -142,7 +142,7 @@ if st.button('Perform Reaction'):
 
                 # Display the result
                 st.write(result)
-                st.success("Reaction simulation completed successfully!")
+                st.success("Done", **{"icon": "✔"})
             except Exception as e:
                 st.error(f"There was an error with the API request: {e}")
 
