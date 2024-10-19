@@ -61,6 +61,9 @@ name_reactions = {
     ]
 }
 
+def convert_to_latex_format(text):
+    return re.sub(r'<sub>(\d+)</sub>', r'_\1', text)
+
 # Function to load elements from CSV
 def load_compounds():
     return pd.read_csv('compounds .csv')
