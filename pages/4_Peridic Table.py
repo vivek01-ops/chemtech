@@ -100,7 +100,7 @@ if not filtered_df.empty:
         )
         # Display as a table
         st.subheader("Element Details", divider="red")
-        st.dataframe(element_df , use_container_width=True) 
+        st.dataframe(element_df , use_container_width=True, hide_index=True) 
 st.info("You can use the sidebar to filter elements!", icon="📢")
 
 st.sidebar.subheader("About Interactive Periodic Table: ", divider="orange")
