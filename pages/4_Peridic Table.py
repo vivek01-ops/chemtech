@@ -68,10 +68,10 @@ st.markdown("""
 
 # Display the filtered table
 # Use Streamlit's built-in dataframe display for simplicity
-columns_to_display = ['Element', 'Symbol', 'Atomic Number','Atomic Weight', 'Valency','Acidity', 'Group', 'State']
+columns_to_display = ['Atomic Number', 'Element', 'Symbol', 'Atomic Weight', 'Valency','Acidity', 'Group', 'State']
 filtered_df = filtered_df[columns_to_display]
 
-st.dataframe(filtered_df, use_container_width=True, height=420)  # Adjust width as needed
+st.dataframe(filtered_df, use_container_width=True, height=420, hide_insdex=True)  # Adjust width as needed
 
 # Display individual element details when clicked
 if not filtered_df.empty:
@@ -81,9 +81,9 @@ if not filtered_df.empty:
         element_info = df[df['Element'] == selected_element].iloc[0]
         # Convert element_info to DataFrame for tabular display
         element_df = pd.DataFrame([{
+            'Atomic Number': element_info['Atomic Number'],
             'Element': element_info['Element'],
             'Symbol': element_info['Symbol'],
-            'Atomic Number': element_info['Atomic Number'],
             'Atomic Weight': element_info['Atomic Weight'],
             'Valency': element_info['Valency'],
             'Color' : element_info['Color'],
