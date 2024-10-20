@@ -118,6 +118,6 @@ if st.button('Perform Reaction'):
 with st.sidebar:
     st.sidebar.subheader("About Basic Reactions: ", divider="orange")
     with st.expander("➜ Click here to read", expanded=False):
-        st.info("📌 The Name Reactions Simulator is an advanced AI-powered tool designed to help chemistry students explore, learn, and simulate chemical reactions. The app focuses on well-known Name Reactions, offering detailed information about the mechanisms, conditions, and products of these reactions. Users can simulate reactions by selecting specific reactants and substrates, with detailed results generated using Generative AI.")
+        st.info("📌 The Chemical Reaction Simulator is a powerful, AI-driven tool designed to simulate chemical reactions dynamically by allowing users to select various chemical elements, catalysts, and conditions. It leverages Generative AI to predict possible reaction outcomes, generating insightful information about the resulting products, including their properties, molecular weight, and density.")
     st.image("https://d29zwu34e1ouns.cloudfront.net/inline-images/aakash_2102369941.png", use_column_width=True)
     st.divider()
