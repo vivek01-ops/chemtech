@@ -91,6 +91,7 @@ with st.sidebar:
 @st.dialog("👥 Meet our team")
 def show_team_members():
     st.subheader("Team ChemTech", divider="red")
+    st.text("**Guided By:** Tushar P. Bagul")
     team_members = [
         {"Name of members": "Krupali J. Mali"},
         {"Name of members": "Ankita Kulkarni"},
@@ -100,7 +101,7 @@ def show_team_members():
     ]
     df = pd.DataFrame(team_members)
     st.dataframe(df, use_container_width=True, hide_index=True)
-    st.text("**Guided By:** Tushar P. Bagul")
+    
 st.sidebar.button("👥 Meet our team", on_click=show_team_members, type="secondary", use_container_width=True)
 
 st.markdown(
