@@ -133,7 +133,7 @@ if st.button('Perform Reaction'):
 
 with st.sidebar:
     st.sidebar.subheader("About Name Reaction: ", divider="orange")
-    with st.expander("Click here to read", expanded=False):
+    with st.expander("➜ Click here to read", expanded=False):
         st.info("The Name Reactions and Benzene Reactions Simulator is an advanced AI-powered tool designed to help chemistry students to explore, learn and simulate chemical reactions. The app focuses on well-known Name Reactions and Benzene Reactions, offering detailed information about the mechanisms, conditions, and products of these reactions. Additionally, users can simulate reactions by selecting specific reactants and substrates, with detailed results generated using Generative AI.",)
     st.image("https://d29zwu34e1ouns.cloudfront.net/inline-images/aakash_2102369941.png", use_column_width=True)
     st.divider()
