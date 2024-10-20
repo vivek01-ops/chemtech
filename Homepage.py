@@ -108,4 +108,6 @@ st.markdown(
         <p style="font-size: 11px; margin-bottom: 5px; font-style: italic;">✨ Powered by ChemTech - Where Chemistry Meets Innovation ✨</p>
     </footer>
     """,
+        unsafe_allow_html=True
+)
   
