@@ -119,5 +119,5 @@ with st.sidebar:
     st.sidebar.subheader("About Basic Reactions: ", divider="orange")
     with st.expander("➜ Click here to read", expanded=False):
         st.info("📌 The Chemical Reaction Simulator is a powerful, AI-driven tool designed to simulate chemical reactions dynamically by allowing users to select various chemical elements, catalysts, and conditions. It leverages Generative AI to predict possible reaction outcomes, generating insightful information about the resulting products, including their properties, molecular weight, and density.")
-    st.image("https://pin.it/63Yg8ywkd", use_column_width=True)
+    st.image("asset/basic-reaction.gif", use_column_width=True)
     st.divider()
