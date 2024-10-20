@@ -92,13 +92,15 @@ with st.sidebar:
 def show_team_members():
     st.subheader("Team ChemTech", divider="red")
     team_members = [
-        {"Name of members": "Aayush Jain"},
-        {"Name of members": "Aniket Singh"},
-        {"Name of members": "Arpit Jain"},
-        {"Name of members": "Arnav Jain"}
+        {"Name of members": "Krupali J. Mali"},
+        {"Name of members": "Ankita Kulkarni"},
+        {"Name of members": "Rutuja Kokane"},
+        {"Name of members": "Ankita K. Matere"}
+        {"Name of members": "Vivek G. Chaudhari"}
     ]
     df = pd.DataFrame(team_members)
     st.dataframe(df, use_container_width=True, hide_index=True)
+    st.text("**Guided By:** Tushar P. Bagul")
 st.sidebar.button("👥 Meet our team", on_click=show_team_members, type="secondary", use_container_width=True)
 
 st.markdown(
