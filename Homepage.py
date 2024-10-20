@@ -82,7 +82,7 @@ with left1:
 
 with right1:
     if st.button("📊 Periodic Table", type="secondary", use_container_width=True):
-        st.switch_page("pages/4_Peridic Table.py")
+        st.switch_page("pages/4_Periodic Table.py")
     
 with st.sidebar:
     st.subheader("Made with ❤️ by ChemTech and Team", divider="red")
