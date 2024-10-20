@@ -102,7 +102,7 @@ def show_team_members():
     df = pd.DataFrame(team_members)
     st.dataframe(df, use_container_width=True, hide_index=True)
     
-st.sidebar.button("👥 Meet our team", on_click=show_team_members, type="primary", use_container_width=True)
+st.sidebar.button("👥 Meet our team", on_click=show_team_members, type="secondary", use_container_width=True)
 
 st.markdown(
     """
