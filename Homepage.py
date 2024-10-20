@@ -91,12 +91,12 @@ with st.sidebar:
 @st.dialog("👥 Meet our team")
 def show_team_members():
     st.subheader("Team ChemTech", divider="red")
-    st.text("**Guided By:** Tushar P. Bagul")
+    st.write("**Guided By:** Tushar P. Bagul")
     team_members = [
         {"Name of members": "Krupali J. Mali"},
         {"Name of members": "Ankita Kulkarni"},
         {"Name of members": "Rutuja Kokane"},
-        {"Name of members": "Ankita K. Matere"}
+        {"Name of members": "Ankita K. Matere"},
         {"Name of members": "Vivek G. Chaudhari"}
     ]
     df = pd.DataFrame(team_members)
