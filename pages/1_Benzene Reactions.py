@@ -132,7 +132,7 @@ if st.button('Perform Reaction'):
             st.error("Please ensure that you have provided inputs of both **reactants** and **substrate**.")
 
 with st.sidebar:
-    st.sidebar.subheader("About Name Reaction: ", divider="orange")
+    st.sidebar.subheader("About Benzene Reaction: ", divider="orange")
     with st.expander("➜ Click here to read", expanded=False):
         st.info("📌 The Benzene Reactions Simulator is an advanced AI-powered tool designed to help chemistry students explore, learn, and simulate reactions involving benzene. The app focuses on well-known benzene reactions, providing detailed information about the mechanisms, conditions, and products of these reactions. Users can simulate reactions by selecting specific reactants and substrates, with comprehensive results generated using Generative AI.")
     st.image("https://d29zwu34e1ouns.cloudfront.net/inline-images/aakash_2102369941.png", use_column_width=True)
