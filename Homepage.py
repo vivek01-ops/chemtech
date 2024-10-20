@@ -87,12 +87,25 @@ with right1:
 with st.sidebar:
     st.subheader("Made with ❤️ by ChemTech and Team", divider="red")
     st.image("asset/chem.gif", use_column_width=True,width=None)
-    
+
+@st.dialog("👥 Meet our team")
+def show_team_members():
+    st.subheader("Team ChemTech", divider="red")
+    team_members = [
+        {"Name of members": "Aayush Jain"},
+        {"Name of members": "Aniket Singh"},
+        {"Name of members": "Arpit Jain"},
+        {"Name of members": "Arnav Jain"}
+    ]
+    df = pd.DataFrame(team_members)
+    st.dataframe(df, use_container_width=True, hide_index=True)
+
+st.button("Meet our team", on_click=show_team_members, type="primary")
+
 st.markdown(
     """
     <footer style="text-align: center; margin-top: 20px;">
         <p style="font-size: 11px; margin-bottom: 5px; font-style: italic;">✨ Powered by ChemTech - Where Chemistry Meets Innovation ✨</p>
     </footer>
     """,
-    unsafe_allow_html=True
-)
+  
