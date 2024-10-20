@@ -99,10 +99,7 @@ def show_team_members():
     ]
     df = pd.DataFrame(team_members)
     st.dataframe(df, use_container_width=True, hide_index=True)
-
-col1, col2, col3 = st.columns(3)
-with col2: 
-    st.button("Meet our team", on_click=show_team_members, type="primary")
+st.button("Meet our team", on_click=show_team_members, type="primary")
 
 st.markdown(
     """
