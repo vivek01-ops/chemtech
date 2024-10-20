@@ -106,7 +106,7 @@ st.sidebar.button("👥 Meet our team", on_click=show_team_members, type="second
 st.markdown(
     """
     <footer style="text-align: center; margin-top: 20px;">
-        <p style="font-size: 11px; margin-bottom: 5px; font-type: italic">✨ Powered by ChemTech - Where Chemistry Meets Innovation ✨</p>
+        <p style="font-size: 11px; margin-bottom: 5px;">✨ Powered by ChemTech - Where Chemistry Meets Innovation ✨</p>
     </footer>
     """,
     unsafe_allow_html=True
