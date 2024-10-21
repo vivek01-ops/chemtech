@@ -94,8 +94,8 @@ def show_team_members():
     st.write("**Guided By:** Tushar P. Bagul")
     team_members = [
         {"Name of members": "Krupali J. Mali"},
-        {"Name of members": "Ankita Kulkarni"},
-        {"Name of members": "Rutuja Kokane"},
+        {"Name of members": "Ankita H. Kulkarni"},
+        {"Name of members": "Rutuja S. Kokane"},
         {"Name of members": "Ankita K. Matere"},
         {"Name of members": "Vivek G. Chaudhari"}
     ]
