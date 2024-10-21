@@ -103,5 +103,9 @@ if not filtered_df.empty:
         st.dataframe(element_df , use_container_width=True, hide_index=True) 
 st.info("You can use the sidebar to filter elements!", icon="📢")
 
-st.sidebar.subheader("About Interactive Periodic Table: ", divider="orange")
-st.sidebar.info("📌 The Interactive Periodic Table is an educational and research-oriented tool designed to help users explore chemical elements with ease. This app offers a streamlined and visually appealing way to filter and investigate the properties of elements based on various chemical and physical attributes. The goal is to provide chemistry and students, educators with an accessible, interactive, and informative platform to study the periodic table.",)
+with st.sidebar:
+    st.sidebar.subheader("About Basic Reactions: ", divider="orange")
+    with st.expander("➜ Click here to read", expanded=False):
+        st.info("📌 The Interactive Periodic Table is an educational and research-oriented tool designed to help users explore chemical elements with ease. This app offers a streamlined and visually appealing way to filter and investigate the properties of elements based on various chemical and physical attributes. The goal is to provide chemistry and students, educators with an accessible, interactive, and informative platform to study the periodic table.")
+    st.image("asset/basic-reaction.gif", use_column_width=True)
+    st.divider()
