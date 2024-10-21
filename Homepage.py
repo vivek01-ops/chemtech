@@ -62,7 +62,7 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-st.subheader("Navigate to:", divider="violet")
+st.subheader("Navigate to:", divider="gray")
 
 left2, right2 = st.columns(2)
     
