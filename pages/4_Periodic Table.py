@@ -14,27 +14,25 @@ def load_data():
 
 df = load_data()
 
-# Sidebar Filters
-st.sidebar.header('Filter Elements')
+st.sidebar.subheader('Filter Elements', divider="orange")
+with st.sidebar.expander("➜ Click here to filter Options", expanded=False):
+    # Filter by Group (s, p, d, f)
+    group_filter = st.multiselect(
+        'Select Group', 
+        options=df['Group'].unique(),
+    )
 
-# Filter by Group (s, p, d, f)
-group_filter = st.sidebar.multiselect(
-    'Select Group', 
-    options=df['Group'].unique(),
-)
+    # Filter by Acidity (acid, base, neutral)
+    acidity_filter = st.multiselect(
+        'Select Acidity', 
+        options=df['Acidity'].unique(),
+    )
 
-# Filter by Acidity (acid, base, neutral)
-acidity_filter = st.sidebar.multiselect(
-    'Select Acidity', 
-    options=df['Acidity'].unique(),
-)
-
-# Filter by State (solid, liquid, gas)
-state_filter = st.sidebar.multiselect(
-    'Select State (Room Temperature)', 
-    options=df['State'].unique(),
-)
-
+    # Filter by State (solid, liquid, gas)
+    state_filter = st.multiselect(
+        'Select State (Room Temperature)', 
+        options=df['State'].unique(),
+    )
 
 # Apply filters only if values are selected, otherwise show all data
 filtered_df = df.copy()
